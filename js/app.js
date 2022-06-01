@@ -1,6 +1,5 @@
 const todoInput = document.getElementById('todo-input')
 const submitBtn = document.getElementById('submit-button')
-const resetBtn = document.getElementById('reset-button')
 const todoList = document.getElementById('todo-list')
 
 
@@ -17,7 +16,3 @@ todoList.addEventListener('click', function(evt){
   parentNode.removeChild(evt.target)
 })
 
-resetBtn.addEventListener('click', function(evt){
-  todoList.innerHTML = ''
-  todoInput.value = ''
-})
