@@ -1,0 +1,11 @@
+
+
+.submit-button {
+  padding:1px;
+  background-color: rgb(236, 2, 2);
+  font-size: 200px;
+}
+
+.reset-button {
+  background-color: red;
+}

@@ -1,18 +1,23 @@
-const addBtn = document.getElementById('add-button')
+const todoInput = document.getElementById('todo-input')
 const submitBtn = document.getElementById('submit-button')
 const resetBtn = document.getElementById('reset-button')
 const todoList = document.getElementById('todo-list')
 
 
 submitBtn.addEventListener('click', function(evt){
-  if (addBtn.value === '')return 
+  if (todoInput.value === '')return 
   const newTodo = document.createElement('li')
-  newTodo.textContent = addBtn.value
+  newTodo.textContent = todoInput.value
   todoList.appendChild(newTodo)
-  addBtn.value = ''
+  todoInput.value = ''
 })
 
 todoList.addEventListener('click', function(evt){
   const parentNode = evt.target.parentNode
   parentNode.removeChild(evt.target)
+})
+
+resetBtn.addEventListener('click', function(evt){
+  todoList.innerHTML = ''
+  todoInput.value = ''
 })
